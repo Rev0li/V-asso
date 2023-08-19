@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 
 const Contact = () => {
   //gerer les erreurs et les validations
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const sendSubmit = (data) => {
     console.log(data);
@@ -18,7 +18,14 @@ const Contact = () => {
         align="center"
         style={{ margin: "10px auto 30px auto" }}
       >
-        Contact Us
+        Contact
+      </Typography>
+      <Typography
+        variant="body1"
+        align="center"
+        style={{ margin: "10px auto 30px auto" }}
+      >
+        Vous avez une Question ?
       </Typography>
       <form onSubmit={handleSubmit(sendSubmit)}>
         <Grid container spacing={3}>

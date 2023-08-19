@@ -42,6 +42,7 @@
     column-width: 100%;
     padding: 0 12px;
   }
+
 }
 
 /* model */
@@ -91,4 +92,11 @@
   background-color: rgba(0,0,0,0.4);
   color: #ffffff;
   cursor: pointer;
+}
+
+.title{
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
 }

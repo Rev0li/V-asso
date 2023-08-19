@@ -12,28 +12,34 @@ import Img6 from "../img/gallery6.png";
 const Gallery = () => {
   let data = [
     {
-      id: 1,
-      imgSrc: Img1,
-    },
-    {
       id: 2,
       imgSrc: Img2,
+      title: "Colors",
+    },
+    {
+      id: 1,
+      imgSrc: Img1,
+      title: "Time",
     },
     {
       id: 3,
       imgSrc: Img3,
+      title: "Brown Bear",
     },
     {
       id: 4,
       imgSrc: Img4,
+      title: "Louis ",
     },
     {
       id: 5,
       imgSrc: Img5,
+      title: "Merlin ",
     },
     {
       id: 6,
       imgSrc: Img6,
+      title: "Dark Bear ",
     },
   ];
   const [model, setModel] = useState(false);
@@ -43,10 +49,11 @@ const Gallery = () => {
     setTempImgSrc(imgSrc);
     setModel(true);
   };
+
   return (
     <>
       <div className={model ? "model open" : "model"}>
-        <img src={tempimgSrc} />
+        <img src={tempimgSrc} alt="mom" />
         <CloseIcon onClick={() => setModel(false)} />
       </div>
       <div className="gallery">
@@ -57,7 +64,8 @@ const Gallery = () => {
               key={index}
               onClick={() => getImg(item.imgSrc)}
             >
-              <img src={item.imgSrc} style={{ width: "100%" }} />
+              <p className="title">{item.title}</p>
+              <img src={item.imgSrc} style={{ width: "100%" }} alt="mom" />
             </div>
           );
         })}

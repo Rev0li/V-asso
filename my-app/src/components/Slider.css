@@ -1,6 +1,6 @@
 .carousel {
   position: relative;
-  max-height: 65vh;
+  /* max-height: 65vh; */
 }
 
 .carousel .thumbs{

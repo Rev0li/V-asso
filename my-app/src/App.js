@@ -2,8 +2,9 @@ import "./App.css";
 import NavBarre from "./components/NavBarre";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Account from "./pages/Account";
+import ContactUs from "./pages/ContactUs";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/account" element={<Account />} />
+        <Route path="/Contact" element={<ContactUs />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
